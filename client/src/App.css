@@ -1,0 +1,28 @@
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  max-height: 500px;
+}
+
+.loading {
+  display: flex;
+  flex-direction: column;
+  margin-top: 100px;
+  justify-content: center;
+  animation: roll-in-blurred-top 1.6s cubic-bezier(0.230, 1.000, 0.320, 1.000) 0.5s both;
+}
+
+@keyframes roll-in-blurred-top {
+  0% {
+    transform: translateY(-800px) rotate(-720deg) scale(0.2);
+    filter: blur(50px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0) rotate(0deg) scale(1);
+    filter: blur(0);
+    opacity: 1;
+  }
+}
